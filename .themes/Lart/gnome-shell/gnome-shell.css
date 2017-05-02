@@ -1,0 +1,26 @@
+@import url("/usr/share/gnome-shell/theme/gnome-shell.css");
+
+/* Panel */
+
+#panel {
+    background-color: #001C1C;
+    font-family: Consolas Regular;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 14pt;
+    height: 1.86em;
+    text-shadow: #000f0f 2px 2px 2px;
+}
+
+.panel-button {
+    -natural-hpadding: 22px;
+    -minimum-hpadding: 10px;
+    font-weight: normal;
+    color: #BFD6D6;
+    transition-duration: 100ms;
+}
+
+.panel-button:hover {
+    color: #DFF6F6;
+}
+

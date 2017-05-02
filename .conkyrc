@@ -1,0 +1,48 @@
+double_buffer yes
+override_utf8_locale yes
+
+#Window specification
+own_window_class Conky
+own_window yes
+own_window_type desktop
+own_window_argb_visual yes
+own_window_argb_value 100
+
+#Start position
+gap_x 50
+gap_y 800
+
+#Window size
+minimum_size 250 250
+maximum_width 530
+
+
+#Text settings
+alignment top_left
+default_color 709090
+default_shade_color 000f0f
+default_outline_color 000f0fn
+
+use_xft yes
+xftfont Droid Sans:size=8
+update_interval 1
+#total_run_times 0
+
+
+
+#Sensors settings
+update_interval 2
+no_buffers yes
+cpu_avg_samples 20
+net_avg_samples 2
+
+TEXT
+${voffset 5}$color${font Droid Sans:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color DFF6F6}${font Droid Sans:pixelsize=42}${time %d} ${voffset -15}$color${font Droid Sans:pixelsize=20}${time  %B} ${time %Y}${font}${voffset 20}${color DFF6F6}${font Droid Sans:pixelsize=60}${offset -90}${time %a}${font}
+${font Droid Sans:pixelsize=17}
+${voffset 1}${offset 12}${color}HDD${offset 5}${color DFF6F6}${fs_free /}/${fs_size /}
+${voffset -20}${offset 250}${color}SWAP${offset 9}${color DFF6F6}${swap}/$swapmax
+${voffset 1}${offset 12}${color}RAM${offset 9}${color DFF6F6}$mem/$memmax
+${voffset -20}${offset 250}${color}CPU ${offset 19}${color DFF6F6}${cpu cpu0}% 
+${voffset 1}${offset 12}${color}NET${offset 7}${color DFF6F6}${addrs eth0}
+${voffset -20}${offset 250}${color}D/U ${offset 7}${color DFF6F6}${offset 10}${downspeedf}/${upspeedf}
+
